@@ -1,0 +1,79 @@
+#standardbutton {
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#standardbutton button {
+    background-image: radial-gradient(circle, maroon, rgb(100,0,0));
+    background-color: maroon;
+    border : 4px solid;
+    border-image-source: radial-gradient(circle, rgb(250,150,0) 0%, rgb(160,0,0) 70%);
+    border-image-slice: 1;
+    cursor : url('custompointer.png'), pointer;
+    position: relative;
+}
+
+#standardbutton p {
+    font-family     : "Upheavel";
+    font-weight     : 500;
+    text-align      : center;
+    font-size       : 1.5vmax;
+    padding         : 1vmax;
+    margin          : 0;
+    color           : transparent;
+    background-clip : text;
+    background-image: radial-gradient(circle, rgb(250,150,0) 0%, rgb(180,80,0) 70%);
+}
+
+#standardbutton button:hover {
+    filter: brightness(1.2);
+}
+
+#standardbutton button:hover p {
+    background-image: radial-gradient(circle, rgb(250,200,0) 0%, rgb(250,150,0) 70%);
+}
+
+#standardbutton button:hover .btn_tooltip {
+    opacity: 1;
+}
+
+#standardbutton button:active p {
+    background-image: radial-gradient(circle, rgb(250,250,0) 0%, rgb(250,250,0) 70%);
+}
+
+#standardbutton button:active {
+    border-image-source: radial-gradient(circle, rgb(250,150,0) 0%, rgb(160,0,0) 70%);
+    background-image: radial-gradient(circle, red, rgb(180,0,0));
+}
+
+.screencontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-box {
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    width: 200%;             
+    aspect-ratio: 16 / 9; 
+    overflow: hidden;
+    border: 0.2vmax solid maroon;
+}
+
+#video-box:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+}
+
+#screen-viewer {
+    width: 100%;             
+    height: 100%;            
+    object-fit: contain;     
+}
+

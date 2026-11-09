@@ -1,0 +1,52 @@
+.tagline {
+    padding: 1vmax;
+    background-color: rgb(150, 10, 10, 0.5);
+    border-radius: 5%;
+    backdrop-filter: blur(2px);
+    position: relative;
+}
+
+.tagline h1 {
+    color : rgb(255, 100, 155);
+    animation: coolestName 1.8s step-end infinite;
+}
+
+#kolejlogo {
+    max-width: 2vmax;
+    max-height: auto;
+    position: absolute;
+    bottom : 360%;
+    left : 22%;
+}
+
+@keyframes coolestName {
+    0% {
+        color : rgb(255, 150, 155);
+        font-size: 2vmax;
+        transform: translateY(5%);
+    }
+
+    25% {
+        color : rgb(255, 100, 155);
+        font-size: 2.02vmax;
+        transform: translateY(3%);
+    }
+
+    50% {
+        color : rgb(255, 150, 255);
+        font-size: 2.03vmax;
+        transform: translateY(-1%);
+    }
+
+    75% {
+        color : rgb(255, 100, 155);
+        font-size: 2.02vmax;
+        transform: translateY(3%);
+    }
+
+    100% {
+        color : rgb(255, 150, 155);
+        font-size: 2vmax;
+        transform: translateY(5%);
+    }
+}

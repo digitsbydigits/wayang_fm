@@ -1,0 +1,144 @@
+.sign-up {
+    margin-top : 4vmax;
+    border-radius: 5%;
+    background: linear-gradient(to left, rgb(80, 0, 0), rgb(120, 0, 0));
+}
+
+.registertext {
+    font-size: clamp(2vw, 2vw, 3vw);
+    text-align: center;
+    align-items: center;
+    color: white;
+    animation: registerText 2s ease infinite;
+}
+
+@keyframes registerText {
+    0% {
+        color : white;
+        transform: translateY(2%);
+    }
+
+    25% {
+        color : rgb(255, 215, 56);
+    }
+
+    50% {
+        color : rgb(255, 191, 0);
+        transform: translateY(5%);
+    }
+
+    75% {
+        color : rgb(255, 215, 56);
+    }
+
+    100% {
+        color : white;
+        transform: translateY(2%);
+    }
+}
+
+.input-contain {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-contain label {
+    font-size : clamp(2dvw, 2dvw, 3dvw);
+    color : white;
+}
+
+.input-contain label, input {
+    margin: 0.2vmax 2vmax 0.2vmax 2vmax;
+}
+
+.input-contain input {
+    background-color: rgb(42, 0, 0);
+    color: gold;
+    border: 0.2dvw solid maroon;
+    padding: 0.5dvw;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: "Press-Start";
+    font-size : clamp(0.9dvw, 0.9dvw, 2dvw);
+
+    width: 25vmax;      
+    max-width: 55vmax;
+    height: 2vmax;      
+    max-height: 3vmax;    
+    box-sizing: border-box;
+}
+
+.input-contain input::placeholder {
+    font-family: "Press-Start";
+    font-size : clamp(0.5dvw, 0.5dvw, 2dvw);
+}
+
+.registerbtn {
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    font-family: "Upheavel";
+    margin: 2vmax;
+}
+
+.registerbtn button {
+    background-image: radial-gradient(circle, rgb(150,0,0), rgb(140,0,0));
+    background-color: maroon;
+    border : 4px solid;
+    border-image-source: radial-gradient(circle, rgb(250,150,0) 0%, rgb(160,0,0) 70%);
+    border-image-slice: 1;
+    cursor : url('custompointer.png'), pointer;
+    position: relative;
+}
+
+.registerbtn p {
+    font-family     : "Upheavel";
+    font-weight     : 500;
+    text-align      : center;
+    font-size       : 1.5vmax;
+    padding         : 1vmax;
+    margin          : 0;
+    color           : transparent;
+    background-clip : text;
+    background-image: radial-gradient(circle, rgb(250,150,0) 0%, rgb(250,50,0) 70%);
+}
+
+.registerbtn button:hover {
+    filter: brightness(1.2);
+}
+
+.registerbtn button:hover p {
+    background-image: radial-gradient(circle, rgb(250,200,0) 0%, rgb(250,150,0) 70%);
+}
+
+.registerbtn button:active p {
+    background-image: radial-gradient(circle, rgb(250,250,0) 0%, rgb(250,250,0) 70%);
+}
+
+.registerbtn button:active {
+    border-image-source: radial-gradient(circle, rgb(250,150,0) 0%, rgb(160,0,0) 70%);
+    background-image: radial-gradient(circle, red, rgb(180,0,0));
+}
+
+.registerbtn button:hover .btn_tooltip {
+    opacity: 1;
+}
+
+.link-contain {
+    padding-bottom : 1vmax;
+    padding-top : 0.5vmax;
+    text-align: center;
+    color: white;
+    font-family: "Press-Start";
+    font-size  : clamp(0.8dvw, 0.8dvw, 1.2dvw);
+}
+
+.link-contain a:link, a:visited, a:active {
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    color: goldenrod;
+}
+
+.link-contain a:hover {
+    color : rgb(250,250,50);
+}

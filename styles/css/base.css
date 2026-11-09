@@ -1,0 +1,366 @@
+@font-face {
+    font-family: "Upheavel";
+    src: url('fonts/upheavtt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Press-Start";
+    src: url('fonts/PressStart2P.ttf') format('truetype');
+}
+
+
+html, body {
+    height : 100%;
+    margin : 0;
+}
+
+/* custom preloader for meee :D */
+
+body {
+    visibility: hidden;
+}
+
+.preventscrolling {
+    overflow: hidden;
+}
+
+.loader {
+    background-color: maroon;
+    visibility: visible;
+    display: flex; 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left  : 0; 
+    width: 600%; 
+    z-index: 100; 
+    cursor: url('popcorn/cursorwait00.png'), wait;
+    animation: cursorWait 1.5s step-end infinite;
+    transition: all 1.2s ease-out; 
+}
+
+.loader img {
+    position: absolute;
+    max-width: 900%;
+    max-height: auto;
+    margin: 0;
+}
+
+.loader p {
+    position : absolute;
+    text-wrap: wrap;
+    width    : 5%;
+    font-size: 5vmax;
+    font-family: "Upheavel";
+    bottom : 30%;
+    left   : 7%;
+    animation: loadText 1.8s step-end infinite;
+}
+
+@keyframes loadText {
+    0% {
+        color : rgb(250,100,0);
+        transform: translateY(5%);
+    }
+
+    25% {
+        color : rgb(250,130,0);
+        transform: translateY(3%);
+    }
+
+    50% {
+        color : rgb(250,200,0);
+        transform: translateY(-1%);
+    }
+
+    75% {
+        color : rgb(250,130,0);
+        transform: translateY(3%);
+    }
+
+    100% {
+        color : rgb(250,100,0);
+        transform: translateY(5%);
+    }
+}
+
+/* end of custom preloader :D */
+
+a {
+    cursor : url('custompointer.png') 16 16, pointer;
+}
+
+body {
+    display: flex;
+    margin : 0;
+    background-image: url('background/wayangbackground.png');
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    cursor : url('customcursor.png'), auto;
+    flex-direction: column;
+    min-height: 100dvh;
+    transition: all 0.9s ease-in-out;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* custom tooltips */
+.custom-tooltip {
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.custom-tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%; 
+    left: 75%;
+    transform: translateX(-50%);
+    font-family: "Press-Start";
+    font-size: clamp(0.6vw, 0.6dvw, 1vw);
+    background-color: maroon;
+    color: white;
+    padding: 1dvh 2dvh;
+    border: 0.2dvw solid gold;
+    white-space: nowrap;
+    z-index: 99999; 
+}
+
+.btn_tooltip {
+    font-size: clamp(0.6vw, 0.6dvw, 1vw);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    background: rgb(170,0,0);
+    font-family: "Press-Start";
+    color: blanchedalmond;
+    border-radius: 5%;
+    text-align: center;
+    padding: 0.7em;
+    width: max-content;
+    position: absolute;
+    left : -2%;
+    bottom : -65%;
+    z-index: 1;
+}
+
+.main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    flex : 1;
+    font-family: "Upheavel";
+}
+
+.spacer {
+    flex: 1;
+    visibility: hidden;
+}
+
+.header a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+.header {
+    font-family: "Upheavel";
+    font-size  : clamp(1.2vw, 1.6vw, 1.6vw);
+    color: white;
+    background: linear-gradient(to left, rgb(170,0,0), rgb(190, 0, 50), rgb(170,0,0)); 
+    cursor : url('custompointer.png') 16 16, pointer;
+}
+
+.headercontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border : 4px solid;
+    border-image-source: radial-gradient(rgb(140,80,60), rgb(100,30,40));
+    border-image-slice: 1;
+}
+
+.header:hover{
+    background: linear-gradient(to left, rgb(250,150,0), rgb(190, 150, 100), rgb(250,150,0));
+}
+
+.header:hover h1{
+    color: rgb(160,0,0);
+    font-size: 3vw;
+}
+
+.header:hover img {
+    transform: rotate(-5deg);
+}
+
+.header .hlogo, 
+.header .spacer {
+    flex: 1; 
+    display: flex;
+}
+
+.header .spacer {
+    justify-content: flex-end;
+}
+
+.header h1 {
+    flex : 0 0 auto;
+    text-align: center;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.header img {
+    max-width: 5.5vmax;
+    max-height: auto;
+    cursor : url('custompointer.png') 16 16, pointer;
+    animation: headerAnim 2s ease-in-out infinite;
+    transition: all 0.5s ease-in-out;
+}
+
+/*header img anim :p*/
+@keyframes headerAnim {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(5%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/*footer*/
+
+footer a:link, a:visited, a:active {
+    text-decoration: none;
+    transition: 0.5s;
+    color : white;
+}
+
+footer a:hover {
+    color : gold;
+    cursor : url('custompointer.png') 16 16, pointer;
+}
+
+footer {
+    margin-top : 3vw;
+    font-family: "Upheavel";
+    color : white;
+    border : 4px solid;
+    border-image-source: radial-gradient(rgb(140,80,60), rgb(100,30,40));
+    border-image-slice: 1;
+}
+
+.footercontain {
+    display : flex;
+    justify-content: space-between;
+    background: linear-gradient(to left, rgb(170,0,0), rgb(190, 0, 50), rgb(170,0,0));
+    transition: all 0.5s ease-in-out;
+}
+
+.footercontain div {
+    flex : 1;
+    align-items: center;
+    text-align: center;
+    margin-top : 0.5vw;
+    margin-bottom : 1vw;
+    transition: all 0.5s ease-in-out;
+    font-size: clamp(1vw, 1.2vw, 1.2vw);
+}
+
+.footerlogo {
+    margin-left : 5vw;
+}
+
+.footerlogo h1 {
+    display : flex;
+    font-size: 4.5vw;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    margin: 1.5vw 0 0 0;
+}
+
+.footerlogo img {
+    max-width : 4.5vw;
+    max-height : auto;
+    position: absolute;
+    bottom : 1.9vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.footercontain:hover .footerlogo a{
+    color : gold;
+}
+
+.footercontain:hover .footerlogo h1 {
+    transform: rotate(-3deg);
+    translate: -1vw -0.4vw;
+    font-size: 4.8vw;
+}
+
+.footercontain:hover .footerlogo img {
+    transform: rotate(-3deg);
+    translate: -1vw -0.1vw;
+    max-width: 5vw;
+    max-height: auto;
+}
+
+.socmed img {
+    max-width : 15%;
+    max-height : auto;
+    transition : all 0.5s ease-in-out;
+}
+
+.socmed img:hover {
+    filter: sepia(80%);
+}
+
+.socmed a {
+    margin-left : 0.4vw;
+    margin-right: 0.4vw;
+    cursor : url('custompointer.png') 16 16, pointer;
+}
+
+.socmed {
+    margin-left : 10vw;
+    margin-right: 5vw;
+}
+
+.bgdisclaimer {
+    font-size : 1vw;
+    opacity: 0.2;
+    position: absolute;
+    color: gray;
+    margin-top: -2.7%;
+    left   : 2%;
+    cursor : url('custompopcornloading.gif')16 16, wait;
+    animation: cursorWait 1.5s step-end infinite;
+}
+
+.bgdisclaimer:hover {
+    opacity: 1;
+}
+
+/* wait cursor anim */
+@keyframes cursorWait {
+    0% {cursor: url('popcorn/cursorwait00.png'), wait;}
+    15% {cursor: url('popcorn/cursorwait01.png'), wait;}
+    25% {cursor: url('popcorn/cursorwait02.png'), wait;}
+    30% {cursor: url('popcorn/cursorwait03.png'), wait;}
+    40% {cursor: url('popcorn/cursorwait04.png'), wait;}
+    45% {cursor: url('popcorn/cursorwait05.png'), wait;}
+    55% {cursor: url('popcorn/cursorwait06.png'), wait;}
+    60% {cursor: url('popcorn/cursorwait07.png'), wait;}
+    65% {cursor: url('popcorn/cursorwait08.png'), wait;}
+    75% {cursor: url('popcorn/cursorwait09.png'), wait;}
+    80% {cursor: url('popcorn/cursorwait10.png'), wait;}
+    85% {cursor: url('popcorn/cursorwait11.png'), wait;}
+    100% {cursor: url('popcorn/cursorwait12.png'), wait;}
+    100% {cursor: url('popcorn/cursorwait13.png'), wait;}
+}
+

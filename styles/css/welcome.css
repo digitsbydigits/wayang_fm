@@ -1,0 +1,178 @@
+body {
+    background-image: url('background/cinemabg_1.jpg');
+    background-position: top;
+}
+
+.welcomecontainer {
+    position : relative;
+    animation: coolHeader 1.8s step-end infinite;
+}
+
+.welcomelogo img {
+    max-width: 10vmax;
+    max-height: auto;
+    position : absolute;
+    bottom   : 38%;
+    transition: all 0.4s ease-in-out;
+}
+
+#star {
+    max-width: 3vmax;
+    max-height: auto;
+    position : absolute;
+    bottom   : 52%;
+    left     : 95%;
+    transition: all 0.4s ease-in-out;
+}
+
+#star2 {
+    max-width: 1.5vmax;
+    max-height: auto;
+    position : absolute;
+    bottom   : 45%;
+    left     : 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.welcomelogo h1 {
+    font-size: 8vmax;
+    color : white;
+    background: radial-gradient(circle, rgb(250,50,0) 0%, rgb(250,150,0) 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.welcomelogo:hover h1{
+    font-size : 8.5vmax;
+}
+
+.welcomelogo:hover img {
+    bottom   : 39%;
+}
+
+.tagline {
+    text-align: center;
+}
+
+.tagline h1 {
+    color : rgb(255, 0, 135);
+    animation: coolTag 1.8s step-end infinite;
+}
+
+.tagline h3 {
+    color : rgb(250,150,0);
+    animation: coolTag 1.8s step-end infinite;
+}
+
+.tagline img {
+    max-width: 30vw;
+    max-height: auto;
+    margin-bottom: -10vmin;
+    margin-top: -10vmin;
+}
+
+/*animations for pidot :D*/
+
+@keyframes coolHeader {
+    0% {
+        transform: translateY(2%);
+    }
+
+    25% {
+        transform: translateY(3%);
+    }
+
+    50% {
+        transform: translateY(4%);
+    }
+
+    75% {
+        transform: translateY(3%);
+    }
+
+    100% {
+        transform: translateY(2%);
+    }
+}
+
+@keyframes coolTag {
+    0% {
+        color : rgb(250,100,0);
+        font-size: 1.5vmax;
+        transform: translateY(5%);
+    }
+
+    25% {
+        color : rgb(250,130,0);
+        font-size: 1.52vmax;
+        transform: translateY(3%);
+    }
+
+    50% {
+        color : rgb(250,200,0);
+        font-size: 1.53vmax;
+        transform: translateY(-1%);
+    }
+
+    75% {
+        color : rgb(250,130,0);
+        font-size: 1.52vmax;
+        transform: translateY(3%);
+    }
+
+    100% {
+        color : rgb(250,100,0);
+        font-size: 1.5vmax;
+        transform: translateY(5%);
+    }
+}
+
+#continue {
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#continue button {
+    background-image: radial-gradient(circle, maroon, rgb(100,0,0));
+    background-color: maroon;
+    border : 4px solid;
+    border-image-source: radial-gradient(circle, rgb(250,150,0) 0%, rgb(160,0,0) 70%);
+    border-image-slice: 1;
+    cursor : url('custompointer.png'), pointer;
+    position: relative;
+}
+
+#continue p {
+    font-family     : "Upheavel";
+    font-weight     : 500;
+    text-align      : center;
+    font-size       : 1.5vmax;
+    padding         : 1vmax;
+    margin          : 0;
+    color           : transparent;
+    background-clip : text;
+    background-image: radial-gradient(circle, rgb(250,150,0) 0%, rgb(160,0,0) 70%);
+}
+
+#continue button:hover {
+    filter: brightness(1.2);
+}
+
+#continue button:hover p {
+    background-image: radial-gradient(circle, rgb(250,200,0) 0%, rgb(250,150,0) 70%);
+}
+
+#continue button:hover .btn_tooltip {
+    opacity: 1;
+}
+
+#continue button:active p {
+    background-image: radial-gradient(circle, rgb(250,250,0) 0%, rgb(250,250,0) 70%);
+}
+
+#continue button:active {
+    border-image-source: radial-gradient(circle, rgb(250,150,0) 0%, rgb(160,0,0) 70%);
+    background-image: radial-gradient(circle, red, rgb(180,0,0));
+}
